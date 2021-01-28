@@ -142,7 +142,7 @@ class MyClass:
 
 ### 3.1 Instance method
 
-- 이제까지 위에서 생성해왔던 **`인스턴스가 사용할 메서드`**가 바로 인스턴스 메서드이다.
+- 이제까지 위에서 생성해왔던 **`인스턴스가 사용할 메서드`**가 바로 `인스턴스 메서드`이다.
 - 클래스 내부에 정의되는 메서드의 기본값이 인스턴스 메서드이기 때문에 따로 `decorator`가 필요없다.
 - 함수를 정의할 때 `self`를 인자값으로 받기만 하면 인스턴스 메서드로서 인정된다.
 
@@ -176,6 +176,10 @@ mc.instance_method()
 # 2) 클래스 메서드
 ## 인스턴스에서 클래스 메서드에 접근 가능하지만, 권장되지 않는다.
 mc.class_method()
+```
+
+```
+__main__.MyClass
 ```
 
 
@@ -694,7 +698,7 @@ print(my_inventory.get_number_of_items())
 
 - 그런데 한가지 이상한 점이 있다.
 
-- `__init__`과 같이 더블언더바를 통해 private 기능을 가능케 하는 것인데, 이와 같이 private에 접근이 가능해지면 사실상 private의 기능이 없는 것 아닌가?
+- `__items`과 같이 더블언더바를 통해 private 기능을 가능케 하는 것인데, 이와 같이 private에 접근이 가능해지면 사실상 private의 기능이 없는 것 아닌가?
 
 - 이러한 파이썬의 Security 문제에 대한 논의가 다음에 있다.
 
@@ -738,5 +742,5 @@ print(my_inventory.get_number_of_items())
 
 ### 5.3 가시성
 
-- `Security`를 고려하여 `Encapsulation`을 이용하는 것인데 `private`으로 지정하기 위해 더블언더바 `__attribute__`를 사용한다.
+- `Security`를 고려하여 `Encapsulation`을 이용하는 것인데 `private`으로 지정하기 위해 더블언더바 `__attribute`를 사용한다.
 - `property decorator`를 함수와 함께 이용하여 `private`이더라도 접근하게 만들 수가 있다.
